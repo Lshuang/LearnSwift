@@ -25,6 +25,8 @@
 		C4E504CB1B7B35A600283DB0 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E504C41B7B35A600283DB0 /* UIColor+Chameleon.m */; };
 		C4E504CC1B7B35A600283DB0 /* UIColor+CIELAB.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E504C61B7B35A600283DB0 /* UIColor+CIELAB.m */; };
 		C4E504CD1B7B35A600283DB0 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E504C81B7B35A600283DB0 /* UIViewController+Chameleon.m */; };
+		C4E504D61B7B45E100283DB0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E504D51B7B45E100283DB0 /* libPods.a */; };
+		C4E504D81B7B45E500283DB0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E504D71B7B45E500283DB0 /* libAFNetworking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		C4E504C71B7B35A600283DB0 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
 		C4E504C81B7B35A600283DB0 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
 		C4E504D21B7B371300283DB0 /* WorkOut_BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkOut_BridgeHeader.h; sourceTree = "<group>"; };
+		C4E504D51B7B45E100283DB0 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		C4E504D71B7B45E500283DB0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E504D81B7B45E500283DB0 /* libAFNetworking.a in Frameworks */,
+				C4E504D61B7B45E100283DB0 /* libPods.a in Frameworks */,
 				C4E504BB1B7B351900283DB0 /* UIKit.framework in Frameworks */,
 				C4E504B91B7B351300283DB0 /* Foundation.framework in Frameworks */,
 			);
@@ -96,6 +102,8 @@
 		24686D2AD946664B0FD2C81A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4E504D71B7B45E500283DB0 /* libAFNetworking.a */,
+				C4E504D51B7B45E100283DB0 /* libPods.a */,
 				C4E504BA1B7B351900283DB0 /* UIKit.framework */,
 				C4E504B81B7B351300283DB0 /* Foundation.framework */,
 				90BC258D9ED362DFC91209A5 /* libPods.a */,
@@ -472,6 +480,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorkOutApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/Lshuang/LearnSwift/WorkOutApp/WorkOutApp/WorkOut_BridgeHeader.h;
 			};
@@ -484,6 +496,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorkOutApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/Lshuang/LearnSwift/WorkOutApp/WorkOutApp/WorkOut_BridgeHeader.h;
 			};
