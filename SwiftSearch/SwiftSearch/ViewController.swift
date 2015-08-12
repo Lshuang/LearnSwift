@@ -16,11 +16,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var searchActive: Bool = false
     /// 模拟数据
     var data = ["San Francisco","New York","San Jose","Chicago","China","Japan","Los Angeles","Austin","Seattle","Koera"]
+    var data0 = ["San Francisco","New York","San Jose","Chicago","China","Japan","Los Angeles","Austin","Seattle","Koera"]
+    var data1 = ["Data1","Data11","Data111","Data1111","Data11111"]
+    var data2 = ["Data2","Data22","Data222","Data2222","Data22222"]
     var filtered: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView = UITableView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64), style: UITableViewStyle.Plain)
+        tableView = UITableView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height), style: UITableViewStyle.Grouped)
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
@@ -95,6 +98,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         return cell!
+    }
+    
+    //section header
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let control = UISegmentedControl(items: ["选择1","选择2","选择3"])
+        control.addTarget(self, action: "valueChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        if(section == 0) {
+            return control
+        }
+        return nil
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
+    }
+    
+    //MARK:选择器方法
+    func valueChanged(segementControl: UISegmentedControl) {
+        println("login: \(segementControl.selectedSegmentIndex)...")
+        if (segementControl.selectedSegmentIndex == 0) {
+            self.data = self.data0
+        } else if (segementControl.selectedSegmentIndex == 1) {
+            self.data = self.data1
+        } else if (segementControl.selectedSegmentIndex == 2) {
+            self.data = self.data2
+        } else {
+            self.data = data0
+        }
+        self.tableView.reloadData()
     }
 
 
