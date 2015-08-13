@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7SM-bH-avO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MyUber-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MyUberApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,103 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h9Y-xx-uhj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oln-4w-iGM">
+                                <rect key="frame" x="0.0" y="64" width="600" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400  Bush St The Republic Of China " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uW-Hg-xXw">
+                                        <rect key="frame" x="8" y="21" width="584" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9uW-Hg-xXw" secondAttribute="trailing" constant="8" id="7Tn-yV-K9n"/>
+                                    <constraint firstItem="9uW-Hg-xXw" firstAttribute="top" secondItem="oln-4w-iGM" secondAttribute="top" constant="21" id="ZzO-OD-IiP"/>
+                                    <constraint firstItem="9uW-Hg-xXw" firstAttribute="leading" secondItem="oln-4w-iGM" secondAttribute="leading" constant="8" id="mB5-9B-xDg"/>
+                                    <constraint firstAttribute="height" constant="64" id="r3D-ct-r07"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo_fence" translatesAutoresizingMaskIntoConstraints="NO" id="r4s-DE-vZz">
+                                <rect key="frame" x="278" y="278" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="EAN-2s-W1w"/>
+                                    <constraint firstAttribute="width" constant="45" id="eFr-7H-UpA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iao-22-WL6">
+                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4ni-bZ-zdk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Request Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="r4s-DE-vZz" secondAttribute="centerX" id="2kV-Et-PqL"/>
+                            <constraint firstAttribute="trailing" secondItem="Iao-22-WL6" secondAttribute="trailing" id="AoL-KW-3JM"/>
+                            <constraint firstItem="h9Y-xx-uhj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="BIw-4I-t3E"/>
+                            <constraint firstItem="Iao-22-WL6" firstAttribute="top" secondItem="h9Y-xx-uhj" secondAttribute="bottom" id="BQf-2L-gX7"/>
+                            <constraint firstItem="h9Y-xx-uhj" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Fhv-s8-gzM"/>
+                            <constraint firstItem="oln-4w-iGM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Gog-5c-iJ5"/>
+                            <constraint firstAttribute="trailing" secondItem="h9Y-xx-uhj" secondAttribute="trailing" id="Hag-LJ-E2C"/>
+                            <constraint firstItem="r4s-DE-vZz" firstAttribute="top" secondItem="Iao-22-WL6" secondAttribute="bottom" id="Ky9-E8-APu"/>
+                            <constraint firstAttribute="bottom" secondItem="h9Y-xx-uhj" secondAttribute="bottom" id="NZL-9T-CZB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Iao-22-WL6" secondAttribute="bottom" id="Zjk-if-Wsk"/>
+                            <constraint firstItem="Iao-22-WL6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fTm-hP-ohg"/>
+                            <constraint firstAttribute="trailing" secondItem="oln-4w-iGM" secondAttribute="trailing" id="olc-v9-ZIg"/>
+                            <constraint firstAttribute="centerY" secondItem="r4s-DE-vZz" secondAttribute="centerY" id="vol-fB-MvM"/>
+                            <constraint firstItem="oln-4w-iGM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="64" id="zd8-t9-PA1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ky9-E8-APu"/>
+                                <exclude reference="BQf-2L-gX7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="MyUber" id="xLq-Go-qli"/>
+                    <connections>
+                        <outlet property="RequestAction" destination="Iao-22-WL6" id="Wf3-ZB-Lcw"/>
+                        <outlet property="addressLabel" destination="9uW-Hg-xXw" id="Mmf-mK-pTQ"/>
+                        <outlet property="mapView" destination="h9Y-xx-uhj" id="Yy2-sV-rwb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1147" y="267"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EjZ-xs-TTU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7SM-bH-avO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GM0-he-qjH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="WL2-5S-d04"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMD-UO-rhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="246"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="geo_fence" width="25" height="25"/>
+    </resources>
 </document>

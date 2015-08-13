@@ -13,6 +13,8 @@
 		C4250FBE1B7B49F4006B7217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4250FBD1B7B49F4006B7217 /* Images.xcassets */; };
 		C4250FC11B7B49F4006B7217 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4250FBF1B7B49F4006B7217 /* LaunchScreen.xib */; };
 		C4250FCD1B7B49F4006B7217 /* MyUberAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4250FCC1B7B49F4006B7217 /* MyUberAppTests.swift */; };
+		C4250FD71B7B4ADD006B7217 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250FD61B7B4ADD006B7217 /* CoreLocation.framework */; };
+		C4250FD91B7B4AE4006B7217 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4250FD81B7B4AE4006B7217 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C4250FC61B7B49F4006B7217 /* MyUberAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyUberAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4250FCB1B7B49F4006B7217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4250FCC1B7B49F4006B7217 /* MyUberAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUberAppTests.swift; sourceTree = "<group>"; };
+		C4250FD61B7B4ADD006B7217 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C4250FD81B7B4AE4006B7217 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4250FD91B7B4AE4006B7217 /* MapKit.framework in Frameworks */,
+				C4250FD71B7B4ADD006B7217 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		C4250FA81B7B49F4006B7217 = {
 			isa = PBXGroup;
 			children = (
+				C4250FD81B7B4AE4006B7217 /* MapKit.framework */,
+				C4250FD61B7B4ADD006B7217 /* CoreLocation.framework */,
 				C4250FB31B7B49F4006B7217 /* MyUberApp */,
 				C4250FC91B7B49F4006B7217 /* MyUberAppTests */,
 				C4250FB21B7B49F4006B7217 /* Products */,
