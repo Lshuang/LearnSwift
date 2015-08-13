@@ -10,13 +10,14 @@ import UIKit
 import AVFoundation
 
 class DetailViewController: UITableViewController {
-    @IBOutlet weak var playerView: UIView!
+    @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var detailText: UILabel!
     var workOut: WorkOut!
     let playerVars = ["playsinline":"1"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.playerView.loadWithVideoId(workOut.videoId, playerVars: playerVars)
         self.view.backgroundColor = workOut.color
         self.detailText.text = workOut.workOutText
         self.title = workOut.title

@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? WorkOutCell
         cell?.textCellLabel.text = workOut?.title
         cell?.backgroundColor = workOut?.color
-        cell?.countLabel.text = "\(indexPath.row)"
+        cell?.countLabel.text = "\(indexPath.row + 1)"
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         return cell!
     }

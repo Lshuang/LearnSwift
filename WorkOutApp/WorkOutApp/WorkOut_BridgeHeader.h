@@ -9,5 +9,7 @@
 #ifndef WorkOutApp_WorkOut_BridgeHeader_h
 #define WorkOutApp_WorkOut_BridgeHeader_h
 #import "Chameleon.h"
+#import "YTPlayerView.h"
+#import "MZTimerLabel.h"
 
 #endif
